@@ -1,19 +1,20 @@
+import java.util.ArrayList;
+
 public class Arcs {
 
-    private Arc[] listeArcs;
+    private ArrayList<Arc> listeArcs;
 
-    public Arc[] listeVide(){
-        Arc[] temp = new Arc[0];
-        return temp;
+    public ArrayList<Arc> listeVide(){
+        ArrayList<Arc> listeVide = new ArrayList<>();
+        return listeVide;
     }
 
-    public void ajouterArc(){
-        int compt = 0;
-
+    public void ajouterArc(Arc a){
+        listeArcs.add(a);
     }
 
-    public void getListArc(){
-
+    public ArrayList<Arc> getListArc(Arc a){
+        return this.listeArcs;
     }
 
 }
