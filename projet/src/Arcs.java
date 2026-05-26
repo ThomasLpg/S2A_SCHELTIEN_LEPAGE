@@ -13,8 +13,13 @@ public class Arcs {
         listeArcs.add(a);
     }
 
-    public ArrayList<Arc> getListArc(Arc a){
+    public ArrayList<Arc> getListArc(){
         return this.listeArcs;
     }
+
+    public int tailleList(){
+        return this.listeArcs.size();
+    }
+
 
 }

@@ -1,5 +1,4 @@
 public class Arc {
-
     private String noeudCible;
     private int poids;
 
@@ -20,5 +19,5 @@ public class Arc {
     public int getPoids() {
         return poids;
     }
-    
+
 }

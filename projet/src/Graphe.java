@@ -3,6 +3,6 @@ import java.util.ArrayList;
 public interface Graphe {
     //graphe
 
-    ArrayList<Arc> getNodeList();
-    ArrayList<Arc> getAdjNodeList();
+    ArrayList<String> getNodeList();
+    ArrayList<Arcs> getAdjNodeList();
 }
