@@ -12,4 +12,13 @@ public class Arc {
             this.poids = p;
         }
     }
+
+    public String getNoeudCible() {
+        return noeudCible;
+    }
+
+    public int getPoids() {
+        return poids;
+    }
+    
 }
