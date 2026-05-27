@@ -20,4 +20,14 @@ public class Arc {
         return poids;
     }
 
+    public String toString(){
+        String res = "";
+        res += this.noeudCible;
+        res += "(";
+        res += this.poids;
+        res += ")";
+
+        return res;
+    }
+
 }

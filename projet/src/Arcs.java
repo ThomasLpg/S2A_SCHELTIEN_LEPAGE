@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Arcs {
 
-    private ArrayList<Arc> listeArcs;
+    private ArrayList<Arc> listeArcs = new ArrayList<>();
 
     public ArrayList<Arc> listeVide(){
         ArrayList<Arc> listeVide = new ArrayList<>();
@@ -21,5 +21,12 @@ public class Arcs {
         return this.listeArcs.size();
     }
 
+    public String toString(){
+        String res ="";
+        for (int i = 0; i < this.listeArcs.size(); i++) {
+            res += this.listeArcs.get(i).toString();
+        }
+        return res;
+    }
 
 }
