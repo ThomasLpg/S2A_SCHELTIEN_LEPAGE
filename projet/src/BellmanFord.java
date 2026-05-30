@@ -8,7 +8,7 @@ public class BellmanFord {
         ArrayList<String> sommets = g.getNodeList();   //on récupère les noeuds du graphe
 
         for (String v : sommets){
-            valeurs.setValeur(v, Double.MAX_VALUE);     //je mets chaque noeud à la sa valeur max
+            valeurs.setValeur(v, Double.MAX_VALUE);     //je mets chaque noeud à sa valeur max
             valeurs.setParent(v, null);          //je mets les parents à null, on n'a pas encore leurs valeurs
         }
         valeurs.setValeur(depart,0);        //et je mets le noeud de départ à 0
