@@ -101,6 +101,7 @@ public class Valeurs {
             cheminInverse.addFirst(courant);               //j'ajoute la valeur courante dans inverse
             courant = this.getParent(courant);  //la valeur courante prend la valeur de son parent
         }
+        // à la fin du while, si j'ai un graphe avec les points ABCD, je devrais avoir un tab [D,C,B,A]
 
         for (int i = cheminNormal.size() -1; i >= 0; i--) {  //je vais "en arrière" dans la liste normale
             cheminInverse.add(cheminInverse.get(i)); //j'ajoute dans le cheminInverse
