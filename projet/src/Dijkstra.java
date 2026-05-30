@@ -33,16 +33,18 @@ public class Dijkstra {
         //Tant que Q est un ensemble non vide faire
         while(!q.isEmpty()){
             //u <- un sommet de Q telle que u.valeur est minimal
-            String u = q.get(0);
-            double minimalValue = valeurs.getValeur(u);
+            String u = null;
+            double minimalValue = Double.MAX_VALUE;
 
             for(String v : q){
-                if(valeurs.getValeur(v) < valeurs.getValeur(u)){
+                if(valeurs.getValeur(v) < minimalValue){
                     minimalValue = valeurs.getValeur(v);
                     u = v;
                 }
             }
-
+            if(u == null || minimalValue == Double.MAX_VALUE){
+                break;
+            }
             // enlever le sommet u de la liste Q
             //Q <- Q \ {u}
             q.remove(u);
@@ -53,7 +55,7 @@ public class Dijkstra {
             //Pour chaque sommet v de Q tel que l'arc (u,v) existe faire
             for(Arc a : arcU.getListArc()){
                 String v = a.getNoeudCible();
-                if(q.contains(u)){
+                if(q.contains(v)){
                     //d <- u.valeur + poids(u,v)
                     double d = valeurs.getValeur(u) + a.getPoids();
                     //Si d < v.valeur
