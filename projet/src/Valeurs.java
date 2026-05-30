@@ -102,7 +102,7 @@ public class Valeurs {
             courant = this.getParent(courant);  //la valeur courante prend la valeur de son parent
         }
 
-        for (int i = cheminNormal.size() -1; i--) {  //je vais "en arrière" dans la liste normale
+        for (int i = cheminNormal.size() -1; i >= 0; i--) {  //je vais "en arrière" dans la liste normale
             cheminInverse.add(cheminInverse.get(i)); //j'ajoute dans le cheminInverse
         }
         return cheminInverse;
