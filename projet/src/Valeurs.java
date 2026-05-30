@@ -98,7 +98,7 @@ public class Valeurs {
         String courant = destination; //je récupère le paramètre que je mets dans courant
 
         while(courant!=null){
-            cheminInverse.add(courant);               //j'ajoute la valeur courante dans inverse
+            cheminInverse.addFirst(courant);               //j'ajoute la valeur courante dans inverse
             courant = this.getParent(courant);  //la valeur courante prend la valeur de son parent
         }
 

@@ -24,5 +24,7 @@ public class TestBellmanFord {
         assertEquals("A", v.getParent("B")); //je vérifie le parent de B
         assertEquals("B", v.getParent("C")); //je vérifie le parent de C
         assertEquals("C", v.getParent("D")); //je vérifie le parent de D
+
+        assertEquals("[A, B, C, D]", v.calculerChemin("D").toString());
     }
 }
