@@ -92,5 +92,20 @@ public class Valeurs {
         return res;
 
     }
+    public List<String> calculerChemin(String destination){
+        List<String> cheminNormal = new ArrayList<>(); //objet pour stocker le chemin normal
+        List<String> cheminInverse = new ArrayList<>();//objet pour stocker le chemin inverse
+        String courant = destination; //je récupère le paramètre que je mets dans courant
+
+        while(courant!=null){
+            cheminInverse.add(courant);               //j'ajoute la valeur courante dans inverse
+            courant = this.getParent(courant);  //la valeur courante prend la valeur de son parent
+        }
+
+        for (int i = cheminNormal.size() -1; i--) {  //je vais "en arrière" dans la liste normale
+            cheminInverse.add(cheminInverse.get(i)); //j'ajoute dans le cheminInverse
+        }
+        return cheminInverse;
+    }
 
 }
