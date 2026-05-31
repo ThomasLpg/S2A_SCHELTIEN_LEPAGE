@@ -4,6 +4,8 @@ out/
 !**/src/test/**/out/
 .kotlin
 projet.iml
+STAN.GTFS/
+venv_python/
 
 ### Eclipse ###
 .apt_generated
