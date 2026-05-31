@@ -17,9 +17,10 @@ public class LireReseau {
                     String coordonnee_x = contenuLigne[2];
                     String coordonne_y = contenuLigne[3];
                     String nom_ligne = contenuLigne[4];
-
                 }
+                ligneStations = brStations.readLine();
             }
+            brStations.close();
 
         }catch (FileNotFoundException e){
             throw new RuntimeException();
@@ -31,10 +32,10 @@ public class LireReseau {
             FileReader frConnexions = new FileReader(fichier_connexions);
             BufferedReader brConnexions = new BufferedReader(frConnexions);
 
-            String ligneConnextions = brConnexions.readLine();
+            String ligneConnexions = brConnexions.readLine();
 
-            while(ligneConnextions != null){
-                String[] contenuLigne = ligneConnextions.split(";");
+            while(ligneConnexions != null){
+                String[] contenuLigne = ligneConnexions.split(";");
                 if(contenuLigne.length >=3){
                     String id_arret_depart = contenuLigne[0];
                     String id_arret_arrivee = contenuLigne[1];
@@ -44,7 +45,9 @@ public class LireReseau {
                     g.ajouterArc(id_arret_depart, id_arret_arrivee, distanceInt);
                     g.ajouterArc(id_arret_arrivee, id_arret_depart, distanceInt);
                 }
+                ligneConnexions = brConnexions.readLine();
             }
+            brConnexions.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {

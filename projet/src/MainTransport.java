@@ -39,7 +39,7 @@ public class MainTransport {
             Valeurs resBmf = bmf.resoudre(g, depart);
             double log42_ = Math.log(42);
             long endTime2 = System.nanoTime();
-            System.err.println("Temps exécution : " + (endTime - startTime) + " ns");
+            System.err.println("Temps exécution : " + (endTime2 - startTime2) + " ns");
 
             if(resBmf.getValeur(arrivee) == Double.MAX_VALUE){
                 System.out.println("Aucun chemin trouvé");
